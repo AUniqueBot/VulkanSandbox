@@ -1,0 +1,9 @@
+// ignore bin
+// ignore build
+// ignore vcpkg_installed
+
+
+build/
+bin/
+vcpkg_installed/
+*.pdb

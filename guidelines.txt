@@ -1,0 +1,20 @@
+- all variables, classes, functions must be lower case.
+    - predominantly do not use "_" unless prefix for struct variable.
+- structs only. classes are structs but to keep it "clean" use struct.
+    - explicit private and protected declarations.
+
+- class variables use hungarian notation
+    - data only structs used as props don't need hungarian notation
+    - p_ - pointer, m_ - regular variable, r_ reference.
+
+- class creation - use a prop struct instead of individual parameters if class requires more than 2 variables.
+    - somestruct(int a, int b) allowed
+    - somestruct(int a, int b, int c) not allowed
+    - somestruct(somestructprops props) allowed.
+
+- namespaces for constants
+ie.
+namespace namespace {
+    constexpr const char[] = "blah";
+};
+- namespace const char strings always use [] instead of * for array size.
