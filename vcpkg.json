@@ -3,9 +3,15 @@
     "version": "0.0.0",
     "builtin-baseline": "c27eeddba73f608f10605d80bc0144c1166f8fb7",
     "dependencies": [
-        "sdl3",
+        {
+            "name": "sdl3",
+            "features": [
+                "vulkan"
+            ]
+        },
         "glm",
         "vulkan",
-        "vulkan-headers"
+        "vulkan-headers",
+        "vk-bootstrap"
     ]
 }

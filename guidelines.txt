@@ -1,20 +1,42 @@
 - all variables, classes, functions must be lower case.
     - predominantly do not use "_" unless prefix for struct variable.
-- structs only. classes are structs but to keep it "clean" use struct.
-    - explicit private and protected declarations.
+    - if you have a suffix, a block letter on the first letter of the suffix is allowed. 
+    This is the only time you can use a block letter. 
+    ie. somefunctionImpl(); 
+    - you can use a block letter in namespaces in the Defs suffix
+    ie. namespace <classname>Def ...
+
+- use structs for configuration data (mainly data only)
+- use class for objects (handles data privately)
+- use class enums, and always enforce a type. no block letters
 
 - class variables use hungarian notation
     - data only structs used as props don't need hungarian notation
     - p_ - pointer, m_ - regular variable, r_ reference.
 
-- class creation - use a prop struct instead of individual parameters if class requires more than 2 variables.
+- class creation - consider using a prop struct instead of individual parameters if requires more than 2 variables.
     - somestruct(int a, int b) allowed
-    - somestruct(int a, int b, int c) not allowed
+    - somestruct(int a, int b, int c) advisable to have a struct.
     - somestruct(somestructprops props) allowed.
 
-- namespaces for constants
+- constants must be wrapped under a namespace.
+- treat constants like macros - block letters and underscores only
+- naming convention for a constant -> C_[category]_[name]
+- no constants must be found in classes
 ie.
-namespace namespace {
-    constexpr const char[] = "blah";
+namespace somenamespace {
+    constexpr const char C_VERTEX_DEFAULT_ALIAS[] = "blah";
 };
+somenamespace::C_VERTEX_DEFAULT_ALIAS;
 - namespace const char strings always use [] instead of * for array size.
+- global variables must be under namespaces
+- aliases are considered types and don't need to be in namespaces
+
+- never use new/delete, use smart pointers.
+- arguments always has _ as a prefix
+
+
+- headers must include header guards. do not use #pragma once
+
+
+- class functions to be separate from class variables

@@ -5,15 +5,20 @@
 #include <sdl3/SDL.h>
 #include <SDL3/SDL_vulkan.h>
 
+#include <gfx/base/arch/graphicsinstance.h>
+
+
 struct windowconfig {
     // do nothing
     std::string name;
     glm::ivec2 dimensions;   
     SDL_WindowFlags flags;
+    graphicsinstance* graphicsinstance;
 };
 
-
-struct window {
+class graphicsinstance;
+class window {
+public:
     window(windowconfig _config = {});
 
     void init();
@@ -29,7 +34,8 @@ private:
     glm::ivec2  m_dimensions;
     SDL_WindowFlags m_windowflags;
 
-    
+private:
+    graphicsinstance* p_gfxinstance;    
 };
 
 
