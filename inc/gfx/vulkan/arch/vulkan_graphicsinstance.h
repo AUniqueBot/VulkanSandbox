@@ -14,7 +14,7 @@ public:
     void cleanup() override;
 
 private:
-    
+    void pickbestdevice();
 private:
     VkInstance m_instance;
     VkApplicationInfo m_appinfo;

@@ -3,8 +3,8 @@
 
 vulkan_graphicspresentation::vulkan_graphicspresentation(
     SDL_Window *_window,
-    VkInstance& _vkinstance 
-) : r_instance{_vkinstance}, p_window{_window} {
+    vk::Instance& _vkinstance 
+) : r_instance(_vkinstance), p_window{_window} {
     
     VkSurfaceKHR surface;
     bool res = SDL_Vulkan_CreateSurface(p_window, r_instance, nullptr, &surface);
@@ -19,10 +19,10 @@ vulkan_graphicspresentation::~vulkan_graphicspresentation() {
 }
 
 bool vulkan_graphicspresentation::init() {
-
+    return false;
 }
 void vulkan_graphicspresentation::acquire() {
-
+    
 }
 void vulkan_graphicspresentation::present() {
 

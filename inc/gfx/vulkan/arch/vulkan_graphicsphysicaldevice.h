@@ -10,10 +10,13 @@ public:
 private:
     graphicslogicdevice* createlogicdeviceImpl() override {
         return new vulkan_graphicslogicdevice; 
-    }    
-private:
-    vk::PhysicalDevice m_device;
+    } 
 
+
+private:
+    friend class vulkan_graphicsinstance;
+    vk::PhysicalDevice m_device;
+    std::vector<vk::QueueFamilyProperties> m_queuefamilies;
 };
 
 

@@ -12,8 +12,10 @@ public:
     virtual void init() = 0;
     virtual void cleanup() = 0;
     
+    inline void setselecteddevice(uint32_t _t) { m_selecteddevice = _t; };
 public:
     std::vector<std::unique_ptr<graphicsphysicaldevice>> m_devicelist;
+    uint32_t m_selecteddevice{};
 };
 
 

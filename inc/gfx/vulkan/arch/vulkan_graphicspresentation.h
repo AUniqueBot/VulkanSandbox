@@ -1,6 +1,8 @@
 #ifndef VULKAN_GRAPHICSPRESENTATION_H_
 #define VULKAN_GRAPHICSPRESENTATION_H_
 
+
+#include <sdl3/SDL.h>
 #include <gfx/base/arch/graphicspresentation.h>
 #include <vulkan/vulkan.hpp>
 
@@ -8,7 +10,7 @@ class vulkan_graphicspresentation : public graphicspresentation {
 public:
     vulkan_graphicspresentation(
         SDL_Window* _window, 
-        VkInstance& _vkinstance
+        vk::Instance& _vkinstance
     );
     ~vulkan_graphicspresentation() override;
 public:
