@@ -2,6 +2,7 @@
 #define VULKAN_GRAPHICSDEVICE_H_
 
 #include <pch.h>
+#include <vulkan/vulkan.hpp>
 #include <gfx/base/arch/graphicslogicdevice.h>
 
 class vulkan_graphicslogicdevice : public graphicslogicdevice {

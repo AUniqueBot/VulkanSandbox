@@ -2,7 +2,7 @@
 #define MAIN_GFX_ARCH_GRAPHICSDEVICE_H_
 
 #include <pch.h>
-#include <vulkan/vulkan.hpp>
+
 
 namespace graphicsdeviceDefs {
     enum class contextType : uint8_t {
@@ -10,6 +10,9 @@ namespace graphicsdeviceDefs {
         copy,
         compute
     };
+
+
+
 };
 
 class graphicscontext;

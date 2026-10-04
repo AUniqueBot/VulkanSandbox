@@ -6,10 +6,7 @@
 
 class vulkan_graphicsqueue : public graphicsqueue {
 public:
-    vulkan_graphicsqueue(
-        vk::Queue _queue, 
-        graphicsqueueDefs::capabilities _capabilities
-    );
+    vulkan_graphicsqueue(vk::Queue _queue) ;
     ~vulkan_graphicsqueue() override;
 
 private:

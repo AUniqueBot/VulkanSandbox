@@ -2,9 +2,8 @@
 
 
 vulkan_graphicsqueue::vulkan_graphicsqueue(
-    vk::Queue _queue,
-    graphicsqueueDefs::capabilities _capabilities
-) : graphicsqueue(_capabilities), m_queue(_queue) {
+    vk::Queue _queue
+) : m_queue(_queue) {
     
 }
 vulkan_graphicsqueue::~vulkan_graphicsqueue() {
