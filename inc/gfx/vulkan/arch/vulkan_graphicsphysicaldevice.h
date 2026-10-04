@@ -7,10 +7,12 @@ class vulkan_graphicsphysicaldevice : public graphicsphysicaldevice {
 public:
     vulkan_graphicsphysicaldevice(vk::PhysicalDevice _device);
     ~vulkan_graphicsphysicaldevice();
+
+    std::vector<vk::ExtensionProperties> getextensions() const;
+    vk::Device vk_createdevice(const vk::DeviceCreateInfo& _args) const;
+
 private:
-    graphicslogicdevice* createlogicdeviceImpl() override {
-        return new vulkan_graphicslogicdevice; 
-    } 
+    graphicslogicdevice* createlogicdeviceImpl() override;
 
 
 private:
